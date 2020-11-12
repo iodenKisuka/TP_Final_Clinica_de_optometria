@@ -1,0 +1,26 @@
+body{
+    background-image: url("../images/fonfo.jpg");
+}
+header{
+    background-color:blueviolet;
+    padding: 10px;
+}
+#inicio{
+    padding: 10px;
+    margin: 20px;
+   justify-content: center;
+}
+#logo{
+    position: absolute;
+    top: 10px;
+}
+footer {
+    background-color: #646464;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: #646464;
+    padding: 5px;
+
+}

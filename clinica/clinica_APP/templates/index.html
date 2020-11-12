@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="shortcut icon" href="../../static/images/ojo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../static/styles/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="{% static 'styles/estilo.css' %}" />
+</head>
+
+<body>
+  <header class="rom">
+    <h1 class="text-center "> Bienvenido</h1> 
+    <img id="logo"  src="{% static 'images/optometrista.png'%}" style=" width: 55px; " />
+  </header>
+  <Div id="inicio" class="row justify-content-center">
+    <div class="col-sm-3">
+      <label form="menu1"> Sector : </label>
+      <select name="menu" id="menu1">
+        <option>secretaría</option>
+        <option>Profesional medico</option>
+        <option>Ventas</option>
+        <option>Taller</option>
+        <option>Gerencia</option>
+      </select>
+    </div>
+    
+    <div class="col-sm-3">
+      <form action="#" target="" method="get" name="formDatosPersonales">
+        <label>Contraseña: <input type="password" name="password" placeholder="contraseña"></label>
+      </form>
+    </div>
+    <button type="button" class="btn btn-primary">Iniciar</button>
+  </Div>
+  <footer>
+   <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+  </footer>
+</body>
+
+</html>
