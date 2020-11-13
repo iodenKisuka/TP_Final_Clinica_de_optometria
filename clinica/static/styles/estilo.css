@@ -1,9 +1,14 @@
 body{
     background-image: url("../images/fonfo.jpg");
 }
+header #titulo{
+    text-shadow: 5px 2px 4px rgb(231, 225, 216);
+    
+}
 header{
     background-color:blueviolet;
     padding: 10px;
+    margin-bottom: 20px;
 }
 #inicio{
     padding: 10px;
@@ -20,7 +25,6 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
-    background-color: #646464;
     padding: 5px;
 
 }
