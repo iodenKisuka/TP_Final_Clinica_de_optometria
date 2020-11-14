@@ -1,0 +1,54 @@
+<title>Agregar Paciente</title>
+
+{% extends "home.html" %} {% block body %}
+<!-- Button trigger modal -->
+
+<form action="{% url 'app_pacientes:index' %}" method="post">
+  {% csrf_token %}
+  <input type="text" , name="tarea" />
+  <input type="submit" />
+</form>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Guardar
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">¿desea agregar al paciente?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Cerrar
+        </button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
