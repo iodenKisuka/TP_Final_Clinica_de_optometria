@@ -2,40 +2,47 @@
 
 {% extends "home.html" %} {% block body %}
 <!-- Button trigger modal -->
+<div class="row justify-content-center">
+  <form class="" action="{% url 'app_pacientes:index' %}" method="post">
+    {% csrf_token %}
+    <div class="container-fluid ">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" placeholder="ingrese nombre" minlength="4" maxlength="40" required />
+    </div>
+    <div class="container-fluid ">
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" placeholder="ingrese apellido" minlength="4" maxlength="40" required />
+    </div>
+    <div class="container-fluid ">
+      <label for="dni">DNI:</label>
+      <input type="text" name="dni" placeholder="ingrese apellido" minlength="4" maxlength="9" required />
+    </div>
+    <div class="container-fluid ">
+      <label for="telefono"> Telefono:</label>
+      <input type="text" name="dni" placeholder="ingrese telefono opcional" minlength="4" maxlength="9" />
+    </div>
+    <div class="container-fluid ">
+      <label for="fecha_nac">fecha de nacimiento :</label>
+      <input type="date" id="start" name="fecha_nac" min="1900-01-01" />
+    </div>
+    <input type="submit" />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Guardar
+    </button>
+  </form>
 
-<form action="{% url 'app_pacientes:index' %}" method="post">
-  {% csrf_token %}
-  <input type="text" , name="tarea" />
-  <input type="submit" />
-</form>
+</div>
 
-<button
-  type="button"
-  class="btn btn-primary"
-  data-toggle="modal"
-  data-target="#exampleModal"
->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Guardar
 </button>
-
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -48,7 +55,14 @@
       </div>
     </div>
   </div>
+  $("#myModal").dialog({
+  modal: true,
+  buttons: {
+  Ok: function() {
+  $( this ).dialog( "close" );
+  }
+  }
+  });
 </div>
-
 
 {% endblock %}

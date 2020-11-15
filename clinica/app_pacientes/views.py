@@ -18,4 +18,6 @@ def home(request):
 class datospersonales(forms.Form):
     nombre = forms.CharField(label="nombre")
     apellido = forms.CharField(label="apellido")
-    dni = forms.CharField(label="dni")
+    dni = forms.IntegerField(label="dni")
+    telefono = forms.IntegerField(label="telefono")
+    fecha_nac = forms.DateField()
