@@ -3,7 +3,7 @@
 {% extends "home.html" %} {% block body %}
 <!-- Button trigger modal -->
 <div class="row justify-content-center">
-  <form class="" action="{% url 'app_pacientes:index' %}" method="post">
+  <form id="formulario" class="" action="{% url 'app_pacientes:index' %}" method="post">
     {% csrf_token %}
     <div class="container-fluid ">
       <label for="nombre">Nombre:</label>
@@ -23,46 +23,22 @@
     </div>
     <div class="container-fluid ">
       <label for="fecha_nac">fecha de nacimiento :</label>
-      <input type="date" id="start" name="fecha_nac" min="1900-01-01" />
+      <input type="date" id="start" name="fecha_nac" min="1900-01-01" required />
     </div>
-    <input type="submit" />
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="submit" class="btn btn-primary">
       Guardar
     </button>
   </form>
 
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Guardar
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">¿desea agregar al paciente?</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Cerrar
-        </button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
-      </div>
-    </div>
-  </div>
-  $("#myModal").dialog({
-  modal: true,
-  buttons: {
-  Ok: function() {
-  $( this ).dialog( "close" );
-  }
-  }
-  });
-</div>
+
+
+<!--
+  form action="{% url 'app_pacientes:agregar' %}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit">
+</form> -->
 
 {% endblock %}
