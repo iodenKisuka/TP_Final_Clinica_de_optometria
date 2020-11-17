@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Clínica de optometría</title>
     <link
       rel="shortcut icon"
       href="../../static/images/ojo.ico"
@@ -23,39 +23,43 @@
         id="logo"
         src="{% static 'images/optometrista.png'%}"
         style="width: 55px"
-      />
+      >
     </header>
-    <div id="inicio" class="row justify-content-center">
-      <div class="col-sm-3">
-        <label form="menuRol"> Sector: </label>
-        <select name="menuRol" id="menuRol">
-          <option>Secretaría</option>
-          <option>Profesional médico</option>
-          <option>Ventas</option>
-          <option>Taller</option>
-          <option>Gerencia</option>
-        </select>
-      </div>
 
-      <div class="col-sm-3">
-        <form action="#" target="" method="get" name="formDatosPersonales">
-          <label
-            >Contraseña:
-            <input type="password" name="password" placeholder="contraseña"
-          /></label>
-        </form>
-      </div>
-      <button type="button" class="btn btn-primary">Iniciar</button>
+
+    <div class="container w-50 d-flex justify-content-center">
+      <form class="form-inline">
+
+        <div class="form-group mb-2">
+          <label for="inputSector"></label>
+            <select class="custom-select my-1 mr-sm-2" id="inputSector">
+              <option selected disabled>Escoja un sector</option>
+              <option value="1">Secretaría</option>
+              <option value="2">Profesional médico</option>
+              <option value="3">Ventas</option>
+              <option value="4">Taller</option>
+              <option value="5">Gerencia</option>
+            </select>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputContraseña" class="sr-only">Contraseña: </label>
+          <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña">
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+          <button type="submit" class="btn btn-primary">Iniciar</button>
+        </div>
+
+      </form>
     </div>
+
     <footer>
       <div>
-        Iconos diseñados por
-        <a href="https://www.flaticon.es/autores/freepik" title="Freepik"
-          >Freepik</a
-        >
-        from
-        <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+        Clínica de optometría
       </div>
     </footer>
+
   </body>
+
 </html>
