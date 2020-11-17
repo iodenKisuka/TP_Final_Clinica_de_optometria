@@ -12,12 +12,12 @@
 
         <div class="form-group col-md-6">
           <label for="inputNombre">Nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" required>
+          <input type="text" class="form-control" id="inputNombre" minlength="3" maxlength="40" placeholder="Nombre" required>
         </div>
 
         <div class="form-group col-md-6">
           <label for="inputApellido">Apellido</label>
-          <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" required>
+          <input type="text" class="form-control" id="inputApellido" minlength="3" maxlength="40" placeholder="Apellido" required>
         </div>
 
       </div>
@@ -25,13 +25,13 @@
       <div class="form-group">
         <label for="inputDNI">DNI</label>
         <div class="input-group mb-2">
-          <input type="text" class="form-control" id="inputDNI" placeholder="Ejemplo: 11.222.333 (sin los puntos)" required>
+          <input type="text" class="form-control" id="inputDNI" minlength="6" maxlength="9"placeholder="Ejemplo: 11.222.333 (sin los puntos)" required>
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputTelefono">Teléfono</label>
-        <input type="text" class="form-control" id="inputTelefono" placeholder="+54 11 55223344" required>
+        <input type="text" class="form-control" id="inputTelefono" minlength="8" maxlength="12" placeholder="+54 11 55223344" required>
       </div>
 
       <div class="form-group">
