@@ -7,12 +7,12 @@ import datetime
 
 
 def index(request):
-    return render(request, "app_pacientes/indexPaciente.html")
+    return render(request, "secretaria/verPaciente.html")
 
 
 # antiguo view
 def agregar(request):
-    return render(request, "app_pacientes/agregarPaciente.html", {
+    return render(request, "secretaria/agregarPaciente.html", {
         "form": Form_datospersonales()
     }
     )
