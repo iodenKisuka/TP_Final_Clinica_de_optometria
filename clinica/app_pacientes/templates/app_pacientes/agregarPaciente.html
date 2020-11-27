@@ -3,32 +3,32 @@
 {% extends "home.html" %} {% block body %}
 <!-- Button trigger modal -->
 <div class="row justify-content-center">
-  <form id="formulario" class="" action="{% url 'app_pacientes:index' %}" method="post">
-    {% csrf_token %}
-    <div class="container-fluid ">
-      <label for="nombre">Nombre:</label>
-      <input type="text" name="nombre" placeholder="ingrese nombre" minlength="4" maxlength="40" required />
-    </div>
-    <div class="container-fluid ">
-      <label for="apellido">Apellido:</label>
-      <input type="text" name="apellido" placeholder="ingrese apellido" minlength="4" maxlength="40" required />
-    </div>
-    <div class="container-fluid ">
-      <label for="dni">DNI:</label>
-      <input type="text" name="dni" placeholder="ingrese apellido" minlength="4" maxlength="9" required />
-    </div>
-    <div class="container-fluid ">
-      <label for="telefono"> Telefono:</label>
-      <input type="text" name="dni" placeholder="ingrese telefono opcional" minlength="4" maxlength="9" />
-    </div>
-    <div class="container-fluid ">
-      <label for="fecha_nac">fecha de nacimiento :</label>
-      <input type="date" id="start" name="fecha_nac" min="1900-01-01" required />
-    </div>
-    <button type="submit" class="btn btn-primary">
+    <form id="formulario" class="" action="{% url 'app_pacientes:index' %}" method="post">
+        {% csrf_token %}
+        <div class="container-fluid ">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" name="nombre" placeholder="ingrese nombre" minlength="5" maxlength="50" required />
+        </div>
+        <div class="container-fluid ">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" name="apellido" placeholder="ingrese apellido" minlength="5" maxlength="50" required />
+        </div>
+        <div class="container-fluid ">
+            <label for="dni">DNI:</label>
+            <input type="text" class="form-control" id="inputDNI" name="dni" placeholder="ingrese DNI" minlength="8" maxlength="9" required />
+        </div>
+        <div class="container-fluid ">
+            <label for="telefono"> Telefono:</label>
+            <input type="text" class="form-control" id="inputTelefono" class="form-control" id="inputTelefono" name="tel" placeholder="ingrese telefono ej. 45523344" minlength="8" maxlength="11" />
+        </div>
+        <div class="container-fluid ">
+            <label for="fecha_nac">fecha de nacimiento :</label>
+            <input type="date" id="fecha" class="form-control" name="fecha_nac" min="1900-01-01" required />
+        </div>
+        <button type="submit" class="btn btn-primary">
       Guardar
     </button>
-  </form>
+    </form>
 
 </div>
 
