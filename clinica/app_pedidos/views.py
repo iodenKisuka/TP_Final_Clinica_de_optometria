@@ -4,14 +4,14 @@ from django import forms
 
 
 def index(request):
-    return render(request, "indexPedido.html")
+    return render(request, "ventas/verProducto.html")
 
 
 pedidos = ["pedido1", "pedido 2"]
 
 
 def imprimir(request):
-    return render(request, "indexPedido.html", {
+    return render(request, "ventas/verProducto.html", {
         "pedidos": pedidos
     })
 
